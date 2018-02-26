@@ -6,4 +6,8 @@ class Account
     @name = name
     @trx = []
   end
+
+  def transact(trx)
+    @trx << trx
+  end
 end
