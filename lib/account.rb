@@ -1,5 +1,5 @@
+# Account has responsibility for account detail eg name, all transactions
 class Account
-
   attr_reader :name, :trx
 
   def initialize(name)
@@ -13,7 +13,7 @@ class Account
   end
 
   def balance
-    return @trx[@trx.length-1].balance unless @trx.length == 0
+    return @trx[@trx.length - 1].balance unless @trx.length.zero?
     0
   end
 end

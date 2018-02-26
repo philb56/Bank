@@ -1,3 +1,4 @@
+# Statement has responsibility for outputting details for the Account
 class Statement
   attr_reader :account
   def initialize(account)
@@ -18,11 +19,14 @@ class Statement
 
   def body
     statement = ''
-    @account.trx.each do | trx |
-      statement += "#{trx.date} ||" + amount(trx.amount, trx.type) + "|| #{trx.balance}" + "\n"
+    @account.trx.each do |trx|
+      statement += "#{trx.date} ||" +
+                   amount(trx.amount, trx.type) +
+                   "|| #{trx.balance}" + "\n"
     end
-    return statement
+    statement
   end
+
   private
 
   def amount(amount, type)

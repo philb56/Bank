@@ -69,5 +69,6 @@ date || credit || debit || balance
 
 To Do
 =====
-lint
+lint - 6 violations remain
 convert date from string to date so the statement can be ordered
+refactor features/statement_spec.rb

@@ -1,7 +1,7 @@
 require 'statement'
 describe Statement do
   let(:account) { double :account, balance: 1 }
-  subject :statement {described_class.new(account)}
+  subject :statement { described_class.new(account) }
 
   it 'should accept an account on instantiation' do
     expect(statement.account).to eq account
