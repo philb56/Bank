@@ -1,9 +1,6 @@
 require 'account'
 describe Account do
   let(:trx) { double :transaction, date: '20/3/2018', type: 'debit', amount: 1}
-  # let(:go_manager) { double :go_manager }
-  # expect(go_manager).to receive(:winner).and_return(:player1)
-
   subject :account {described_class.new('Bob')}
 
   it 'should have a name when instantiated' do
