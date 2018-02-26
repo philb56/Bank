@@ -1,6 +1,6 @@
 require 'account'
 describe Account do
-  let(:trx) { double :transaction, date: '20/3/2018', type: 'debit', amount: 1}
+  let(:trx) { double :transaction, date: '20/3/2018', type: 'debit', amount: 1, balance: 1, calculate_balance: -1}
   subject :account {described_class.new('Bob')}
 
   it 'should have a name when instantiated' do

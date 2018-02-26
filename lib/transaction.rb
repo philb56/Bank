@@ -6,4 +6,9 @@ class Transaction
     @amount = amount
     @balance = balance + (type === 'debit' ? -amount : amount )
   end
+
+  def calculate_balance(balance)
+    @balance = balance + (type === 'debit' ? -amount : amount )
+  end
+
 end
