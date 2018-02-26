@@ -15,11 +15,15 @@ class Statement
   def body
     statement = ''
     @account.trx.each do | trx |
-      credit = trx.amount if trx.type == 'credit'
-      debit = trx.amount if trx.type == 'debit'
-      statement += "#{trx.date} || #{credit} || #{debit} || #{trx.balance}"
-      statement += "\n"
+      statement += "#{trx.date} ||" + amount(trx.amount, trx.type) + "|| #{trx.balance}" + "\n"
     end
     return statement
+  end
+  private
+
+  def amount(amount, type)
+    cr = amount if type == 'credit'
+    db = amount if type == 'debit'
+    " #{cr} || #{db} "
   end
 end
