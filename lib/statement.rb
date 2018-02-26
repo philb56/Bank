@@ -4,8 +4,12 @@ class Statement
     @account = account
   end
 
+  def statement
+    header + body
+  end
+
   def header
-    'date || credit || debit || balance'
+    'date || credit || debit || balance' + "\n"
   end
 
   def body

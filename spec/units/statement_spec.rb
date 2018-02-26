@@ -8,7 +8,7 @@ describe Statement do
   end
 
   it "should be able to output a header" do
-    expect(statement.header).to eq 'date || credit || debit || balance'
+    expect(statement.header).to eq 'date || credit || debit || balance' + "\n"
   end
 
 end
