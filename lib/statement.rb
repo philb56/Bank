@@ -8,6 +8,10 @@ class Statement
     header + body
   end
 
+  def puts_statement
+    puts statement
+  end
+
   def header
     'date || credit || debit || balance' + "\n"
   end
