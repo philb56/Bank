@@ -16,5 +16,4 @@ describe Account do
     expect(account.trx[0]).to eq trx
   end
 
-
 end
