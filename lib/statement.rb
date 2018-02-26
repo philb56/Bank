@@ -13,7 +13,8 @@ class Statement
     @account.trx.each do | trx |
       credit = trx.amount if trx.type == 'credit'
       debit = trx.amount if trx.type == 'debit'
-      statement = "#{trx.date} || #{credit} || #{debit} || #{trx.balance}"
+      statement += "#{trx.date} || #{credit} || #{debit} || #{trx.balance}"
+      statement += "\n"
     end
     return statement
   end
