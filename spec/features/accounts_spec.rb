@@ -7,7 +7,6 @@ describe Account do
     trx = Transaction.new('22/3/2018', 'debit', 1)
     account = Account.new('Bob')
     account.transact(trx)
-    p "test #{account.trx[0].balance}"
     expect(account.balance).to eq -1
   end
 
