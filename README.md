@@ -12,6 +12,7 @@ Bank Tech Test
 * Data can be kept in memory (it doesn't need to be stored to a database or anything).
 
 * Acceptance criteria
+
 ```
 Given a client makes a deposit of 1000 on 10-01-2012
 And a deposit of 2000 on 13-01-2012
@@ -69,6 +70,8 @@ date || credit || debit || balance
 
 To Do
 =====
-lint - 6 violations remain
-convert date from string to date so the statement can be ordered
-refactor features/statement_spec.rb
+* lint - 6 violations remain
+
+* convert date from string to date so the statement can be ordered
+
+* refactor features/statement_spec.rb
